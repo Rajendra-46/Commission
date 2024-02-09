@@ -18,8 +18,7 @@ pipeline {
 	           // clean the project before build
 	           sh "make clean"
 		}
-	}
-        
+	}        
         stage('Compile code') {
            steps{
 		//sh "cppcheck *.cpp --enable=all"
