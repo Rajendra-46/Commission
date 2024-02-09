@@ -14,6 +14,11 @@ pipeline {
                   checkout scm  //scmGit(branches: [[name: 'main']], extensions: [], userRemoteConfigs: [[credentialsId: 'Commission_jenkins', url: 'https://github.com/Rajendra-46/CommissioningApi']])
             }
         }
+	stage('Clean'){
+		steps{
+	           sh "make clean"
+		}
+	}
         
         stage('Compile code') {
            steps{
