@@ -4,7 +4,6 @@ pipeline {
     // environment {
        // DOCKER_IMAGE_NAME = 'my_ubuntu_image'
        // DOCKERFILE_PATH = 'docker pull mavrikraj/my_ubuntu_image'
-       // GITHUB_REPO_URL = 'https://github.com/Rajendra-46/CommissioningApi.git'
   //  }
     
     stages {
