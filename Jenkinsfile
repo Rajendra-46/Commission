@@ -10,7 +10,7 @@ pipeline {
         stage('Checkout') {
             
             steps {
-                  checkout scm  //scmGit(branches: [[name: 'main']], extensions: [], userRemoteConfigs: [[credentialsId: 'Commission_jenkins', url: 'https://github.com/Rajendra-46/CommissioningApi']])
+                  checkout scm  // if Repository private then  scmGit(branches: [[name: 'main']], extensions: [], userRemoteConfigs: [[credentialsId: 'Commission_jenkins', url: 'https://github.com/Rajendra-46/CommissioningApi']])
             }
         }
 	stage('Clean'){
