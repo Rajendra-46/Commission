@@ -15,6 +15,7 @@ pipeline {
         }
 	stage('Clean'){
 		steps{
+	           // clean the project before build
 	           sh "make clean"
 		}
 	}
