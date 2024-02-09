@@ -1,0 +1,31 @@
+<RCC>
+    <qresource prefix="/">
+        <file>images/apply-btn.png</file>
+        <file>images/C_logo.png</file>
+        <file>images/checked-15x15.png</file>
+        <file>images/checked-20x20.png</file>
+        <file>images/commit.png</file>
+        <file>images/cupsprinter.png</file>
+        <file>images/delete.png</file>
+        <file>images/delete-patrols.png</file>
+        <file>images/export.png</file>
+        <file>images/icon_nav_end.png</file>
+        <file>images/icon_nav-start.png</file>
+        <file>images/image-slider-left.png</file>
+        <file>images/image-slider-right.png</file>
+        <file>images/min.png</file>
+        <file>images/network_show_password_hover.png</file>
+        <file>images/radiochecked-20x20.png</file>
+        <file>images/radiounchecked-20x20.png</file>
+        <file>images/reset.png</file>
+        <file>images/restore.png</file>
+        <file>images/save-local.png</file>
+        <file>images/search.png</file>
+        <file>images/tree-closed.png</file>
+        <file>images/tree-open.png</file>
+        <file>images/unchecked-15x15.png</file>
+        <file>images/unchecked-20x20.png</file>
+        <file>images/view-page.png</file>
+        <file>CART.AWL</file>
+    </qresource>
+</RCC>

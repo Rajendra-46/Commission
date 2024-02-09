@@ -1,0 +1,686 @@
+﻿DATA_BLOCK "KcLog_CART"
+{ S7_Optimized_Access := 'FALSE' }
+AUTHOR : vlcpah
+FAMILY : KcLog
+NAME : CART
+VERSION : 0.9
+NON_RETAIN
+   STRUCT 
+      CART : Struct
+         Header : Struct
+            Crane_ID : Int;   // Crane ID (G number)
+            Sender : Int;   // Sender ID
+            seq : Int;
+            Len : Int;   // Lenght of Data
+            Spare_I8 : Int;
+            Spare_I10 : Int;
+         END_STRUCT;
+         A1 : Struct   // Hoist 1 Drive
+            PD1 : Int;   // Speed
+            PD2 : Int;   // Current
+            PDn : Int;
+            PD5 : Int;   // Unit Temp
+            PD8 : Int;   // Fault codes
+            REF1 : Int;   // Speed reference
+            Bits : Struct
+               VA_RUN : Bool;   // RUN
+               VA_DriveOK : Bool;   // Drive OK
+               VAM_DIR1_Motor : Bool;   // MOTOR DIR1
+               VAM_DIR2_Motor : Bool;   // MOTOR DIR2
+               FaultInverted : Bool;   // NOT FAULT
+               Ready : Bool;   // READY
+               K7 : Bool;   // BRAKE CONTROL
+               Spare_x0_7 : Bool;
+               CW1_S1 : Bool;   // DIR 1
+               CW1_S2 : Bool;   // DIR 2
+               CW1_S12 : Bool;   // STOP LIMIT DIR1
+               CW1_S22 : Bool;   // STOP LIMIT DIR2
+               CW2_RunDisable : Bool;   // RUN_DISABLE
+               CW1_Ramp2 : Bool;   // RAMP2
+               spare_x1_6 : Bool;
+               spare_x1_7 : Bool;
+            END_STRUCT;
+         END_STRUCT;
+         A2 : Struct   // Hoist 2 Drive
+            PD1 : Int;   // Speed
+            PD2 : Int;   // Current
+            PDn : Int;
+            PD5 : Int;   // Unit Temp
+            PD8 : Int;   // Fault codes
+            REF1 : Int;   // Speed reference
+            Bits : Struct
+               VA_RUN : Bool;   // RUN
+               VA_DriveOK : Bool;   // Drive OK
+               VAM_DIR1_Motor : Bool;   // MOTOR DIR1
+               VAM_DIR2_Motor : Bool;   // MOTOR DIR2
+               FaultInverted : Bool;   // NOT FAULT
+               Ready : Bool;   // READY
+               K7 : Bool;   // BRAKE CONTROL
+               Spare_x0_7 : Bool;
+               CW1_S1 : Bool;   // DIR 1
+               CW1_S2 : Bool;   // DIR 2
+               CW1_S12 : Bool;   // STOP LIMIT DIR1
+               CW1_S22 : Bool;   // STOP LIMIT DIR2
+               CW2_RunDisable : Bool;   // RUN_DISABLE
+               CW1_Ramp2 : Bool;   // RAMP2
+               spare_x1_6 : Bool;
+               spare_x1_7 : Bool;
+            END_STRUCT;
+         END_STRUCT;
+         E : Struct   // Trolley Drive
+            PD1 : Int;   // Speed
+            PD2 : Int;   // Current
+            PDn : Int;
+            PD5 : Int;   // Unit Temp
+            PD8 : Int;   // Fault codes
+            REF1 : Int;   // Speed reference
+            Bits : Struct
+               VA_RUN : Bool;   // RUN
+               VA_DriveOK : Bool;   // Drive OK
+               VAM_DIR1_Motor : Bool;   // MOTOR DIR1
+               VAM_DIR2_Motor : Bool;   // MOTOR DIR2
+               FaultInverted : Bool;   // NOT FAULT
+               Ready : Bool;   // READY
+               K7 : Bool;   // BRAKE CONTROL
+               Spare_x0_7 : Bool;
+               CW1_S1 : Bool;   // DIR 1
+               CW1_S2 : Bool;   // DIR 2
+               CW1_S12 : Bool;   // STOP LIMIT DIR1
+               CW1_S22 : Bool;   // STOP LIMIT DIR2
+               CW2_RunDisable : Bool;   // RUN_DISABLE
+               CW2_Setposition : Bool;   // Encoder calibration
+               CW3_FloatingBypass : Bool;   // Floating Bypass
+               Spare_x1_7 : Bool;
+            END_STRUCT;
+         END_STRUCT;
+         R1 : Struct   // Gantry Drive 1
+            PD1 : Int;   // Speed
+            PD2 : Int;   // Current
+            PDn : Int;
+            PD5 : Int;   // Unit Temp
+            PD8 : Int;   // Fault codes
+            REF1 : Int;   // Speed reference
+            Bits : Struct
+               VA_RUN : Bool;   // RUN
+               VA_DriveOK : Bool;   // Drive OK
+               VAM_DIR1_Motor : Bool;   // MOTOR DIR1
+               VAM_DIR2_Motor : Bool;   // MOTOR DIR2
+               FaultInverted : Bool;   // NOT FAULT
+               Ready : Bool;   // READY
+               K7 : Bool;   // BRAKE CONTROL
+               Spare_x0_7 : Bool;
+               CW1_S1 : Bool;   // DIR 1
+               CW1_S2 : Bool;   // DIR 2
+               CW1_S12 : Bool;   // STOP LIMIT DIR1
+               CW1_S22 : Bool;   // STOP LIMIT DIR2
+               CW2_RunDisable : Bool;   // RUN_DISABLE
+               CW3_FloatingBypass : Bool;   // Floating Bypass
+               CW1_AltControlMode : Bool;   // Alt control Mode
+               Spare_x1_7 : Bool;
+            END_STRUCT;
+         END_STRUCT;
+         R2 : Struct   // Gantry Drive 2
+            PD1 : Int;   // Speed
+            PD2 : Int;   // Current
+            PDn : Int;
+            PD5 : Int;   // Unit Temp
+            PD8 : Int;   // Fault codes
+            REF1 : Int;   // Speed reference
+            Bits : Struct
+               VA_RUN : Bool;   // RUN
+               VA_DriveOK : Bool;   // Drive OK
+               VAM_DIR1_Motor : Bool;   // MOTOR DIR1
+               VAM_DIR2_Motor : Bool;   // MOTOR DIR2
+               FaultInverted : Bool;   // NOT FAULT
+               Ready : Bool;   // READY
+               K7 : Bool;   // BRAKE CONTROL
+               Spare_x0_7 : Bool;
+               CW1_S1 : Bool;   // DIR 1
+               CW1_S2 : Bool;   // DIR 2
+               CW1_S12 : Bool;   // STOP LIMIT DIR1
+               CW1_S22 : Bool;   // STOP LIMIT DIR2
+               CW2_RunDisable : Bool;   // RUN_DISABLE
+               CW3_FloatingBypass : Bool;   // Floating Bypass
+               CW1_AltControlMode : Bool;   // Alt control Mode
+               Spare_x1_7 : Bool;
+            END_STRUCT;
+         END_STRUCT;
+         R3 : Struct   // Gantry Drive 3
+            PD1 : Int;   // Speed
+            PD2 : Int;   // Current
+            PDn : Int;
+            PD5 : Int;   // Unit Temp
+            PD8 : Int;   // Fault codes
+            REF1 : Int;   // Speed reference
+            Bits : Struct
+               VA_RUN : Bool;   // RUN
+               VA_DriveOK : Bool;   // Drive OK
+               VAM_DIR1_Motor : Bool;   // MOTOR DIR1
+               VAM_DIR2_Motor : Bool;   // MOTOR DIR2
+               FaultInverted : Bool;   // NOT FAULT
+               Ready : Bool;   // READY
+               K7 : Bool;   // BRAKE CONTROL
+               Spare_x0_7 : Bool;
+               CW1_S1 : Bool;   // DIR 1
+               CW1_S2 : Bool;   // DIR 2
+               CW1_S12 : Bool;   // STOP LIMIT DIR1
+               CW1_S22 : Bool;   // STOP LIMIT DIR2
+               CW2_RunDisable : Bool;   // RUN_DISABLE
+               CW3_FloatingBypass : Bool;   // Floating Bypass
+               CW1_AltControlMode : Bool;   // Alt control Mode
+               Spare_x1_7 : Bool;
+            END_STRUCT;
+         END_STRUCT;
+         R4 : Struct   // Gantry Drive 4
+            PD1 : Int;   // Speed
+            PD2 : Int;   // Current
+            PDn : Int;
+            PD5 : Int;   // Unit Temp
+            PD8 : Int;   // Fault codes
+            REF1 : Int;   // Speed reference
+            Bits : Struct
+               VA_RUN : Bool;   // RUN
+               VA_DriveOK : Bool;   // Drive OK
+               VAM_DIR1_Motor : Bool;   // MOTOR DIR1
+               VAM_DIR2_Motor : Bool;   // MOTOR DIR2
+               FaultInverted : Bool;   // NOT FAULT
+               Ready : Bool;   // READY
+               K7 : Bool;   // BRAKE CONTROL
+               Spare_x0_7 : Bool;
+               CW1_S1 : Bool;   // DIR 1
+               CW1_S2 : Bool;   // DIR 2
+               CW1_S12 : Bool;   // STOP LIMIT DIR1
+               CW1_S22 : Bool;   // STOP LIMIT DIR2
+               CW2_RunDisable : Bool;   // RUN_DISABLE
+               CW3_FloatingBypass : Bool;   // Floating Bypass
+               CW1_AltControlMode : Bool;   // Alt control Mode
+               Spare_x1_7 : Bool;
+            END_STRUCT;
+         END_STRUCT;
+         B1 : Struct   // ACM DRIVE 1
+            PD1 : Int;   // Speed
+            PD2 : Int;   // Current
+            PDn : Int;
+            PD5 : Int;   // Unit Temp
+            PD8 : Int;   // Fault codes
+            REF2 : Int;   // Torque reference
+            Bits : Struct
+               VA_RUN : Bool;   // RUN
+               VA_DriveOK : Bool;   // Drive OK
+               FaultInverted : Bool;   // NOT FAULT
+               Ready : Bool;   // READY
+               K7 : Bool;   // BRAKE CONTROL
+               Spare_x0_5 : Bool;
+               Spare_x0_6 : Bool;
+               Spare_x0_7 : Bool;
+               CW1_S1 : Bool;   // DIR 1
+               Spare_x1_1 : Bool;
+               Spare_x1_2 : Bool;
+               Spare_x1_3 : Bool;
+               Spare_x1_4 : Bool;
+               Spare_x1_5 : Bool;
+               Spare_x1_6 : Bool;
+               Spare_x1_7 : Bool;
+            END_STRUCT;
+         END_STRUCT;
+         B2 : Struct   // ACM DRIVE 2
+            PD1 : Int;   // Speed
+            PD2 : Int;   // Current
+            PDn : Int;
+            PD5 : Int;   // Unit Temp
+            PD8 : Int;   // Fault codes
+            REF2 : Int;   // Torque reference
+            Bits : Struct
+               VA_RUN : Bool;   // RUN
+               VA_DriveOK : Bool;   // Drive OK
+               FaultInverted : Bool;   // NOT FAULT
+               Ready : Bool;   // READY
+               K7 : Bool;   // BRAKE CONTROL
+               Spare_x0_5 : Bool;
+               Spare_x0_6 : Bool;
+               Spare_x0_7 : Bool;
+               CW1_S1 : Bool;   // DIR 1
+               Spare_x1_1 : Bool;
+               Spare_x1_2 : Bool;
+               Spare_x1_3 : Bool;
+               Spare_x1_4 : Bool;
+               Spare_x1_5 : Bool;
+               Spare_x1_6 : Bool;
+               Spare_x1_7 : Bool;
+            END_STRUCT;
+         END_STRUCT;
+         B3 : Struct   // ACM DRIVE 3
+            PD1 : Int;   // Speed
+            PD2 : Int;   // Current
+            PDn : Int;
+            PD5 : Int;   // Unit Temp
+            PD8 : Int;   // Fault codes
+            REF2 : Int;   // Torque reference
+            Bits : Struct
+               VA_RUN : Bool;   // RUN
+               VA_DriveOK : Bool;   // Drive OK
+               FaultInverted : Bool;   // NOT FAULT
+               Ready : Bool;   // READY
+               K7 : Bool;   // BRAKE CONTROL
+               Spare_x0_5 : Bool;
+               Spare_x0_6 : Bool;
+               Spare_x0_7 : Bool;
+               CW1_S1 : Bool;   // DIR 1
+               Spare_x1_1 : Bool;
+               Spare_x1_2 : Bool;
+               Spare_x1_3 : Bool;
+               Spare_x1_4 : Bool;
+               Spare_x1_5 : Bool;
+               Spare_x1_6 : Bool;
+               Spare_x1_7 : Bool;
+            END_STRUCT;
+         END_STRUCT;
+         B4 : Struct   // ACM DRIVE 4
+            PD1 : Int;   // Speed
+            PD2 : Int;   // Current
+            PDn : Int;
+            PD5 : Int;   // Unit Temp
+            PD8 : Int;   // Fault codes
+            REF2 : Int;   // Torque reference
+            Bits : Struct
+               VA_RUN : Bool;   // RUN
+               VA_DriveOK : Bool;   // Drive OK
+               FaultInverted : Bool;   // NOT FAULT
+               Ready : Bool;   // READY
+               K7 : Bool;   // BRAKE CONTROL
+               Spare_x0_5 : Bool;
+               Spare_x0_6 : Bool;
+               Spare_x0_7 : Bool;
+               CW1_S1 : Bool;   // DIR 1
+               Spare_x1_1 : Bool;
+               Spare_x1_2 : Bool;
+               Spare_x1_3 : Bool;
+               Spare_x1_4 : Bool;
+               Spare_x1_5 : Bool;
+               Spare_x1_6 : Bool;
+               Spare_x1_7 : Bool;
+            END_STRUCT;
+         END_STRUCT;
+         W : Struct   // Cable reel Drive
+            PD1 : Int;   // Speed
+            PD2 : Int;   // Current
+            PDn : Int;
+            PD5 : Int;   // Unit Temp
+            PD8 : Int;   // Fault codes
+            REF2 : Int;   // Torque reference
+            Bits : Struct
+               VA_RUN : Bool;   // RUN
+               VA_DriveOK : Bool;   // Drive OK
+               VAM_DIR1_Motor : Bool;   // MOTOR DIR1
+               VAM_DIR2_Motor : Bool;   // MOTOR DIR2
+               FaultInverted : Bool;   // NOT FAULT
+               Ready : Bool;   // READY
+               K7 : Bool;   // BRAKE CONTROL
+               Spare_x0_7 : Bool;
+               CW1_S1 : Bool;   // DIR 1
+               CW1_S2 : Bool;   // DIR 2
+               CW1_AltControlMode : Bool;   // Alt control Mode
+               Spare_x1_3 : Bool;
+               Spare_x1_4 : Bool;
+               Spare_x1_5 : Bool;
+               Spare_x1_6 : Bool;
+               Spare_x1_7 : Bool;
+            END_STRUCT;
+         END_STRUCT;
+         O : Struct   // Dynareq
+            PD1 : Int;   // DC-Link Voltage
+            PD2 : Int;   // Total Current
+            PD3 : Int;   // Active Current
+            PD5 : Int;   // Unit Temp
+            PD8 : Int;   // Fault codes
+            Bits : Struct
+               RUN : Bool;   // RUN
+               Ready : Bool;   // READY
+               Synchronized : Bool;   // Synchronized
+               FaultInverted : Bool;   // NOT FAULT
+               Spare_x0_4 : Bool;
+               Spare_x0_5 : Bool;
+               Spare_x0_6 : Bool;
+               Spare_x0_7 : Bool;
+               CW_Synchronized : Bool;   // Synchronized control
+               Spare_x1_1 : Bool;
+               Spare_x1_2 : Bool;
+               Spare_x1_3 : Bool;
+               Spare_x1_4 : Bool;
+               Spare_x1_5 : Bool;
+               Spare_x1_6 : Bool;
+               Spare_x1_7 : Bool;
+            END_STRUCT;
+         END_STRUCT;
+         T : Struct   // Dynacon
+            PD1 : Int;   // DC-Link Voltage
+            PD2 : Int;   // Total Current
+            PD3 : Int;   // Active Current
+            PD5 : Int;   // Unit Temp
+            PD8 : Int;   // Fault codes
+            Bits : Struct
+               RUN : Bool;   // RUN
+               Ready : Bool;   // READY
+               Fault_Inverted : Bool;   // NOT FAULT
+               Spare_x0_3 : Bool;
+               Spare_x0_4 : Bool;
+               Spare_x0_5 : Bool;
+               Spare_x0_6 : Bool;
+               Spare_x0_7 : Bool;
+               Spare_x1_0 : Bool;
+               Spare_x1_1 : Bool;
+               Spare_x1_2 : Bool;
+               Spare_x1_3 : Bool;
+               Spare_x1_4 : Bool;
+               Spare_x1_5 : Bool;
+               Spare_x1_6 : Bool;
+               Spare_x1_7 : Bool;
+            END_STRUCT;
+         END_STRUCT;
+         Control : Struct   // Control Place
+            MO_CSEL : Bool;   // Cabin control place
+            MO_RSEL : Bool;   // Radio control place
+            MO_F1SEL : Bool;   // ROS control place
+            MO_F2SEL : Bool;   // MROS control place
+            MO_SSEL : Bool;   // CCS control place
+            MO_GSEL : Bool;   // Ground level control place
+            MO_TSEL : Bool;   // Trolley control place
+            con_x07 : Bool;
+            IO_CON : Bool;   // Main contactor ON
+            MO_ESTOP_OK : Bool;   // Estop OK
+            con_x10 : Bool;
+            con_x11 : Bool;
+            con_x12 : Bool;
+            Maintenance_mode : Bool;   // Maintenance_mode
+            Remote_Sel : Bool;   // Remote control selected
+            Local_Sel : Bool;   // Local control selected
+         END_STRUCT;
+         Hoist : Struct   // Hoist
+            A1_POS : Real;   // Hoist 1 position in [m]
+            A2_POS : Real;   // Hoist 2 position in [m]
+            A1_A2_POS_DIFF : Real;   // Hoist positions Difference [m]
+            SYNCHRO_POSITION : Real;   // Position error to Synchro [m]
+            TRIM_POSITION : Real;   // Trim Position [m]
+            MA_CLOAD : Real;   // Total container load value [t]
+            MA_LOAD : Real;   // Total load value [t]
+            MA1_LOAD : Real;   // A1 total load value [t]
+            MA2_LOAD : Real;   // A2 total load value [t]
+            LOAD_VAR_LOAD_RL : Real;   // Total corner load [t]
+            LOAD_VAR_LOAD_FL : Real;   // Total corner load [t]
+            LOAD_VAR_LOAD_FR : Real;   // Total corner load [t]
+            LOAD_VAR_LOAD_RR : Real;   // Total corner load [t]
+            CORNER_1_LOAD : Real;   // Hoist 1 loadcell 1 load [t]
+            CORNER_2_LOAD : Real;   // Hoist 1 loadcell 2 load [t]
+            CORNER_3_LOAD : Real;   // Hoist 2 loadcell 1 load [t]
+            CORNER_4_LOAD : Real;   // Hoist 2 loadcell 2 load [t]
+            SPEED_REQUEST : Real;   // Speed Request [%]
+            SLOWDOWN_SPD : Real;   // Slowdown speed  [%]
+            ESP : Real;   // Hoist Estimated Position [m]
+            A_LOAD_CHANGE : Int;   // Load Changed counter
+            MA1_DIR1_DIS : Bool;
+            MA1_DIR2_DIS : Bool;
+            MA1_DIR1_STOP : Bool;
+            MA1_DIR2_STOP : Bool;
+            MA2_DIR1_DIS : Bool;
+            MA2_DIR2_DIS : Bool;
+            MA2_DIR1_STOP : Bool;
+            MA2_DIR2_STOP : Bool;
+            MA_POS_OK : Bool;
+            Sync_Error : Bool;
+            Sync_stop : Bool;
+            MA_SR : Bool;
+            MA_Someload : Bool;
+            ho_x83_5 : Bool;
+            ho_x83_6 : Bool;
+            ho_x83_7 : Bool;
+            ho_x84_0 : Bool;
+            ho_x84_1 : Bool;
+            ho_x84_2 : Bool;
+            ho_x84_3 : Bool;
+            ho_x84_4 : Bool;
+            ho_x84_5 : Bool;
+            ho_x84_6 : Bool;
+            ho_x84_7 : Bool;
+            MAR_DIR1 : Bool;   // Hoist joystick radio
+            MAR_DIR2 : Bool;   // Hoist joystick radio
+            MAF_DIR1 : Bool;   // Hoist joystick ROS
+            MAF_DIR2 : Bool;   // Hoist joystick ROS
+            MAS_DIR1 : Bool;   // Hoist drive request CCS
+            MAS_DIR2 : Bool;   // Hoist drive request CCS
+            ho_x85_6 : Bool;
+            ho_x85_7 : Bool;
+         END_STRUCT;
+         Trolley : Struct   // Trolley
+            POS : Real;   // Trolley Position [m]
+            D2V_POS : Real;   // Trolley Position Drive [m]
+            CCS_POS : Real;   // Trolley_Position CCS [m]
+            Speed_Request : Real;   // Trolley Speed Request [%]
+            Slowdown_Speed : Real;   // Trolley Slowdown speed [%]
+            ESP : Real;   // Trolley Estimated Stopping Position [m]
+            DIR1_DIS : Bool;
+            DIR2_DIS : Bool;
+            DIR1_STOP : Bool;
+            DIR2_STOP : Bool;
+            POS_OK : Bool;
+            Tr_x24_5 : Bool;
+            Tr_x24_6 : Bool;
+            Tr_x24_7 : Bool;
+            MER_DIR1 : Bool;   // Trolley drive request radio
+            MER_DIR2 : Bool;   // Trolley drive request radio
+            MEF_DIR1 : Bool;   // Trolley drive request ROS
+            MEF_DIR2 : Bool;   // Trolley drive request ROS
+            MES_DIR1 : Bool;   // Trolley drive request CCS
+            MES_DIR2 : Bool;   // Trolley drive request CCS
+            Tr_x25_6 : Bool;
+            Tr_x25_7 : Bool;
+         END_STRUCT;
+         Gantry : Struct   // Gantry
+            POS : Real;   // Gantry Position [m]
+            CRANE_TO_CRANE_DISTANCE : Real;   // Crane to Crane Distance  [m]
+            Speed_Request : Real;   // Ganty Speed Request [%]
+            Slowdown_Speed : Real;   // Gantry Slowdown speed [%]
+            ESP : Real;   // Gantry Estimated Stopping Position [m]
+            DIR1_DIS : Bool;
+            DIR2_DIS : Bool;
+            DIR1_STOP : Bool;
+            DIR2_STOP : Bool;
+            MR_POS_OK : Bool;
+            Ga_x20_5 : Bool;
+            Ga_x20_6 : Bool;
+            Ga_x20_7 : Bool;
+            MRR_DIR1 : Bool;   // Gantry drive request radio
+            MRR_DIR2 : Bool;   // Gantry drive request radio
+            MRF_DIR1 : Bool;   // Gantry drive request ROS
+            MRF_DIR2 : Bool;   // Gantry drive request ROS
+            MRS_DIR1 : Bool;   // Gantry drive request CCS
+            MRS_DIR2 : Bool;   // Gantry drive request CCS
+            Ga_x21_6 : Bool;
+            Ga_x21_7 : Bool;
+            MR_ACC : Bool;
+            MR_DEC : Bool;
+            MR2_ACC : Bool;
+            MR2_DEC : Bool;
+            MR_ENC_ACC : Bool;
+            MR_ENC_DEC : Bool;
+            MR_MINSPON : Bool;
+            Ga_x22_7 : Bool;
+            Ga_x23_0 : Bool;
+            Ga_x23_1 : Bool;
+            Ga_x23_2 : Bool;
+            Ga_x23_3 : Bool;
+            Ga_x23_4 : Bool;
+            Ga_x23_5 : Bool;
+            Ga_x23_6 : Bool;
+            Ga_x23_7 : Bool;
+         END_STRUCT;
+         ACM : Struct   // ACM
+            B1_LOAD : Real;   // ACM 1 Load [t]
+            B2_LOAD : Real;   // ACM 2 Load [t]
+            B3_LOAD : Real;   // ACM 3 Load [t]
+            B4_LOAD : Real;   // ACM 4 Load [t]
+            Skew_Ref : Real;   // Skew reference [%]
+            MM_E_REF : Real;   // Micromove E reference [%]
+            MM_R_REF : Real;   // Micromove R reference [%]
+            KN_Factor : Real;   // KN FActor
+            B1_Sway_Speed : Real;   // ACM 1 Sway speed
+            B2_Sway_Speed : Real;   // ACM 2 Sway speed
+            B3_Sway_Speed : Real;   // ACM 3 Sway speed
+            B4_Sway_Speed : Real;   // ACM 4 Sway speed
+            B1_Force_OUT : Real;   // ACM 1 Force_output [kN]
+            B2_Force_OUT : Real;   // ACM 2 Force_output [kN]
+            B3_Force_OUT : Real;   // ACM 3 Force_output [kN]
+            B4_Force_OUT : Real;   // ACM 4 Force_output [kN]
+         END_STRUCT;
+         Spreader : Struct   // Spreader
+            Twistlocks_Locked : Bool;   // Twistlock Locked
+            Twistlocks_Unlocked : Bool;   // Twistlock Unlocked
+            Landed : Bool;   // Landed
+            Telescope_locked : Bool;   // Telescope locks locked
+            Telescope_unlocked : Bool;   // Telescope locks unlocked
+            Twin_UP : Bool;   // Twin UP
+            Spr_x06 : Bool;
+            Spr_x07 : Bool;
+            Spr_x08 : Bool;
+            Spr_x09 : Bool;
+            Spr_x10 : Bool;
+            Spr_x11 : Bool;
+            Spr_x12 : Bool;
+            Spr_x13 : Bool;
+            Spr_x14 : Bool;
+            Spr_x15 : Bool;
+         END_STRUCT;
+         Bogie : Struct   // Bogie
+            Pos1 : Real;   // Bogie 1 Position [dec]
+            Pos2 : Real;   // Bogie 2 Position [dec]
+            Pos3 : Real;   // Bogie 3 Position [dec]
+            Pos4 : Real;   // Bogie 4 Position [dec]
+            Pos5 : Real;   // Bogie 5 Position [dec]
+            Pos6 : Real;   // Bogie 6 Position [dec]
+            Pos7 : Real;   // Bogie 7 Position [dec]
+            Pos8 : Real;   // Bogie 8 Position [dec]
+         END_STRUCT;
+         Safeway : Struct   // Safeway
+            A1_SPEED : Real;   // Safeway speed [m/s]
+            A2_SPEED : Real;   // Safeway speed [m/s]
+            A1_TARGET_SPEED : Real;   // Safeway Target Speed [mm/s]
+            A2_TARGET_SPEED : Real;   // Safeway Target Speed [mm/s]
+            A1_Safeway_Error : Bool;
+            A1_Speed_Window_Alarm : Bool;
+            A1_Overspeed1_Alarm : Bool;
+            A1_Overspeed2_Alarm : Bool;
+            A1_System_Alarm_Ack : Bool;
+            A1_Speed_Window_Ack : Bool;
+            A1_Overspeed1_Ack : Bool;
+            A1_Overspeed2_Ack : Bool;
+            A2_Safeway_Error : Bool;
+            A2_Speed_Window_Alarm : Bool;
+            A2_Overspeed1_Alarm : Bool;
+            A2_Overspeed2_Alarm : Bool;
+            A2_System_Alarm_Ack : Bool;
+            A2_Speed_Window_Ack : Bool;
+            A2_Overspeed1_Ack : Bool;
+            A2_Overspeed2_Ack : Bool;
+         END_STRUCT;
+         Cable_Reel : Struct   // Cable_Reel
+            MIN_TRQ : Real;   // Selected MIN Torque [%]
+            MAX_TRQ : Real;   // Selected MAX Torque [%]
+            Transducer_Current : Real;   // Transducer Current Signal [mA]
+         END_STRUCT;
+         CCS : Struct   // CCS
+            Gantry_Target : Real;
+            Trolley_target : Real;
+            List_Angle : Real;
+            Trim_Angle : Real;
+            CCS_Seq_State : Int;
+            spdr_diff_to_Cont_X : Int;   // Distance to underlying container [mm]
+            spdr_diff_to_Cont_Y : Int;   // Distance to underlying container [mm]
+            spdr_diff_to_Cont_SKEW : Int;   // Distance to underlying container [mdec]
+            spdr_abspos_x : Int;   // Spreader position from Sirrah Trolley Direction [mm]
+            spdr_abspos_y : Int;   // Spreader position from Sirrah Gantry Direction [mm]
+            spdr_abspos_skew : Int;   // Spreader position from Sirrah Skew [mdec]
+            spdr_diff_to_target_X : Int;   // Distance to target position  [mm]
+            spdr_diff_to_target_Y : Int;   // Distance to target position [mm]
+            spdr_diff_to_target_Z : Int;   // Distance to target position  [mm]
+            spdr_diff_to_target_SKEW : Int;   // Distance to target position  [mdec]
+            Spdr_diff_to_Ideal_X : Int;   // Spreader difference to Ideal X [mm]
+            Spdr_diff_to_Ideal_Y : Int;   // Spreader difference to Ideal Y [mm]
+            Spdr_diff_to_Ideal_SK : Int;   // Spreader difference to Ideal skew [mDec]
+            Angle_To_Track : Int;   // Angle to Track [deg/100]
+            Distance_To_Track : Int;   // Distance to Track [mm]
+            Autosteering_ok : Bool;   // Autosteering OK
+            RTG_ON_RAIL : Bool;   // RTG ON Rail
+         END_STRUCT;
+         MISC : Struct   // MISC
+            Wind_Speed : Real;   // Wind Speed [m/s]
+            HUMID_EROOM : Real;   // E-room Humidity [%]
+            HUMID_TFR : Real;   // Transformer room Humidity [%]
+            HUMID_TR_CUBICLE : Real;   // Trolley cubicle Humidity [%]
+            TEMP_EROOM : Real;   // Eroom temperature [C]
+            TEMP_TFR : Real;   // Transformer room temperature [C]
+            TEMP_TR_CUBICLE : Real;   // Trolley cubicle temperature [C]
+         END_STRUCT;
+         Profibus : Struct   // Profibus
+            Address_6 : Bool;   // Cable Reel
+            Address_7 : Bool;   // Dynareq
+            Address_9 : Bool;   // Dynacon
+            Address_10 : Bool;   // TrHouse I/O
+            Address_11 : Bool;   // Gantry R12 Drive
+            Address_12 : Bool;   // Gantry R34 Drive
+            Address_13 : Bool;   // Gantry R56 Drive
+            Address_14 : Bool;   // Gantry R78 Drive
+            Address_15 : Bool;   // Power meter
+            Address_16 : Bool;   // Radio
+            Address_20 : Bool;   // Trolley I/O
+            Address_21 : Bool;   // Safeway 1
+            Address_22 : Bool;   // Safeway 2
+            Address_x01 : Bool;   // NOT   USED
+            Address_x02 : Bool;   // NOT   USED
+            Address_x03 : Bool;   // NOT   USED
+            Address_31 : Bool;   // Gantry R1 Encoder
+            Address_32 : Bool;   // Gantry R2 Encoder
+            Address_33 : Bool;   // Gantry R3 Encoder
+            Address_34 : Bool;   // Gantry R4 Encoder
+            Address_35 : Bool;   // Gantry R5 Encoder
+            Address_36 : Bool;   // Gantry R6 Encoder
+            Address_37 : Bool;   // Gantry R7 Encoder
+            Address_38 : Bool;   // Gantry R8 Encoder
+            Address_40 : Bool;   // NOT   USED
+            Address_51 : Bool;   // ACM 1
+            Address_52 : Bool;   // ACM 2
+            Address_53 : Bool;   // ACM 3
+            Address_54 : Bool;   // ACM 4
+            Address_55 : Bool;   // Hoist 1
+            Address_56 : Bool;   // Hoist 2
+            Address_57 : Bool;   // Trolley
+            Address_60 : Bool;   // Access side I/O
+            Address_61 : Bool;   // Bogie Box 1
+            Address_62 : Bool;   // Bogie Box 2
+            Address_63 : Bool;   // Bogie Box 3
+            Address_64 : Bool;   // Bogie Box 4
+            Address_70 : Bool;   // Spreader
+            Address_x04 : Bool;   // NOT   USED
+            Address_x05 : Bool;   // NOT   USED
+            Address_x06 : Bool;   // NOT   USED
+            Address_x07 : Bool;   // NOT   USED
+            Address_x08 : Bool;   // NOT   USED
+            Address_x09 : Bool;   // NOT   USED
+            Address_x10 : Bool;   // NOT   USED
+            Address_x11 : Bool;   // NOT   USED
+            Address_x12 : Bool;   // NOT   USED
+            Address_x13 : Bool;   // NOT   USED
+         END_STRUCT;
+         Spare_Real : Array[1..16] of Real;
+         Spare_Int : Array[1..16] of Int;
+         Spare_Bit : Array[1..16] of Bool;
+         Spare_byte : Array[1..646] of Byte;
+         PLC_cycle_time : Int;   // PLC_cycle time.. Last line in KcLogger
+      END_STRUCT;
+   END_STRUCT;
+
+
+BEGIN
+   CART.Header.Sender := 1;
+   CART.Header.Len := 1300;
+
+END_DATA_BLOCK
+
