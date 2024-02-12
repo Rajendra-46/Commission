@@ -5,7 +5,7 @@ on :
             - main
 jobs:
   Compile-Deploy:
-	runs-on : self-hosted
+	runs-on : ubuntu-latest
 	steps:
 	  - name: trigger jenkins
 	    run: curl http://192.168.1.46:8080/job/Commission/build?token=test
