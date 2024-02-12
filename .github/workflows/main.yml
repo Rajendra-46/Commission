@@ -1,11 +1,12 @@
 name: Build
-on:
- push:
-   branches:
-	- main
+on: 
+  push:
+    branches:
+    - main
 jobs:
-  Compile-deploy-dev:
-    runs-on:ubuntu-latest
+  Compile-Deploy-Dev:
+    runs-on: ubuntu-latest
     steps:
-      - name:trigger jenkins
-	run: curl http://192.168.1.46:8080/job/Commission/build?token=test
+      - name: trigger jenkins 
+        run:  |
+          curl http://192.168.1.46:8080/job/Commisioning/build?token=test
