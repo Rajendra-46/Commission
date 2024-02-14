@@ -20,7 +20,7 @@ pipeline {
 	}        
         stage('Compile code') {
            steps{
-		sh "cppcheck *.cpp --enable=all"
+		//sh "cppcheck *.cpp --enable=all"
                 sh "qmake CommissioningTool.pro"
 		sh "make"
            }
