@@ -1,5 +1,5 @@
 pipeline {
-    agent any   
+   // agent any   
     // environment {
        // DOCKER_IMAGE_NAME = 'my_ubuntu_image'
        // DOCKERFILE_PATH = 'docker pull mavrikraj/my_ubuntu_image'
