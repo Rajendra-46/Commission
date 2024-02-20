@@ -6,18 +6,16 @@ pipeline {
    //  }
    //stages started here 
     stages {
-       agent{
-		docker{
-			image mavrikraj/my_ubuntu_image:latest
-			reuseNode true
-			label 'any'
-			}	
-	}
-
 	
         stage('Checkout') {
 
-	   
+	   agent{
+			docker{
+				image mavrikraj/my_ubuntu_image:latest
+				reuseNode true
+				label 'any'
+				}
+		}
             
             steps {
                   checkout scm  // if Repository private then used this -  scmGit(branches: [[name: 'main']], extensions: [], userRemoteConfigs: [[credentialsId: 'Commission_jenkins', url: 'https://github.com/Rajendra-46/CommissioningApi']])
