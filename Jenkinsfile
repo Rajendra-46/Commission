@@ -8,7 +8,7 @@ pipeline {
 
    agent {
 		docker{
-			image 'my_ubuntu_image:latest'
+			image 'mavrikraj/my_ubuntu_image:latest'
 			}
 	}
 
